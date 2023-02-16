@@ -1,0 +1,135 @@
+﻿@{
+    ViewData["Title"] = "Event registration";
+}
+<head>
+    <script src="~/lib/jquery/jquery.js"></script>
+       
+</head>
+<body>
+    <img class="image" src="https://www.cvent.com/sites/default/files/migrated_attachments/new_statesman_events.jpg" height="100" weight="1000px">
+    <h1 style="color:aqua">Event Registration Form</h1>
+
+    <form class="form-inline" >
+        <p id="event">
+            <div class="form-group">
+            FirstName:<input type="Text" class="form-control" oninvalid="alert('You must fill out the form!');" FirstName="fname" required>
+            </div>
+            <div class="form-group">
+            lastname<input type="text" id ="LastName"class= "form-control" oninvalid="alert('You must fill out the form!');" LastName="lname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email" placeholder="enter your email address"><br>
+            </div><br>
+            <br><br><div class="form-group">
+                    PassWord:<input type="password" class="form-control" id="pwd" placeholder="Enter password"><br>
+                </div>
+            
+        </p>
+       
+     </form>
+
+     <form class="form-vertical">
+            <br>Phone No:<input type="Number" /><br>
+            <br>JobTitle:<input type="Text" /><br>
+            <br>Company<input type="Text" name="Company" /><br>
+            <br><label>Address:</label><br>
+            <textarea rowspan="10" colspan="20" placeholder="enter your current address"></textarea><br>
+
+            <div class="description">
+                <br><label>Company Description</label>
+                <br /><textarea rowspan="20" colspan="20"></textarea>
+            </div>
+            <div class="product">
+                <label>Product/Service to Exhibit</label><br>
+                <br><textarea rowspan="20" colspan="20"></textarea><br>
+                <br><label>what type of booth do u like?</label><br>
+            <p class="text-danger">u should choose only one option</p>
+                <input type="radio" id="in-person booth only" />
+                <label for="in-Person booth only">in-person booth only</label><br>
+                <input type="radio" id="Virtual booth only" />
+                <label for=" virtual booth onbly">virtual booth only</label><br>
+                <input type="radio" id="Virtual&in-person booth only" />
+                <label for="Virtual&in-Person booth onbly">virtual&in-person booth only</label><br>
+                <!--<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">submit</button>-->
+                <!--<button type="button" onclick="myFunction()">submit</button>-->
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name=" test-radio " id="test">
+                    <label class="form-check-label" for="radio">inpersonbooth and virtual booth</label>
+                </div>
+            <div class=" alert alert-info">you can take below as example for filling your name</div>
+            <table class="table table-dark table-striped table-sm-4">
+                    <thead>
+                        <tr class="table-primary">
+                            <th>firstName</th>
+                            <th>lastName</th>
+                            
+                        </tr>
+                        <tr class="table-success">
+                            <td>John</td>
+                            <td>doe</td>
+                        </tr>
+                        <tr class="table-danger">
+                            <td>Mary</td>
+                            <td>Moe</td>
+                        </tr>
+                    </thead>
+
+                </table>
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    select your skills
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">dotnet</a></li>
+                    <li><a class="dropdown-item" href="#">java</a></li>
+                    <li><a class="dropdown-item" href="#">python</a></li>
+                </ul>
+            </div>
+                <P>define your skills range in dotnet</P>
+                <label for="customRange" class="form-label">Custom range</label>
+            <input type="range" class="form-range" id="customRange" name="points">
+    
+
+            <br><p class="text-info">please click on below submit button for successfull registration.</p>
+
+            </div>
+            <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+      <label class="form-check-label" for="mySwitch">Dark Mode</label>
+    </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" title="hooray submitted successfully">click and submit</button>
+            <!--<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">submit</button>-->
+            <!--<button type="button" onclick="myFunction()">submit</button>-->
+            <button class="btn btn-primary" disabled>
+             <span class="spinner-border spinner-border-sm"></span>
+             </button>
+             <br><p id="confirm">i think you successfully filled the form</p>
+       <div class="progress"><br>
+            <div class="progress-bar" style="width:70%"></div>
+        </div>
+        <br><ul class="pagination"><br>
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+        </ul>
+        
+      <div class="toast show">
+    <div class="toast-header">
+      <strong class="me-auto">have u submitted the form</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body">
+      <p id="test">if not please fill and submit</p>
+    </div>
+  </div>
+  
+    </form>
+    <br><button>thanks for registration</button><br>
+
+    <p id="test1">if u get error check the form once.</p>
+    <p id="test2">once you filled everything then u can submit your form.</p>
+    <p id="test3">please follow below steps.</p>
+
+    <div style="background:aqua;height:10px;width:10px;position:absolute;"></div>
+    
+</body>
